@@ -28,7 +28,7 @@ Port (
 		SCK  : in  std_logic;    -- SPI input clock
 		MOSI : in  std_logic;    -- SPI serial data input
 		MISO : out std_logic;
-		CEON   : in  std_logic;   -- is new data ready?dataOut : out  STD_LOGIC_VECTOR(31 downto 0); -- data for the write command
+		CEON   : in  std_logic;   -- is new data ready?
 		dataIn : in std_logic_vector(31 downto 0); -- word read from SDRAM
 		dataOut : out std_logic_vector(31 downto 0);
 		dataRdy : out std_logic);	
