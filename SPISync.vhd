@@ -39,7 +39,7 @@ end SPISync;
 architecture Behavioral of SPISync is
 
 type cmdSequence is (idle, readReq, readLSW, readMSW, writeLSW, writeMSW, pause);
-signal currentState: cmdSequence := idle;  --current and next state declaration.
+signal currentState: cmdSequence := idle;  --current state declaration.
 signal col : std_logic_vector(7 downto 0) := (others => '0');
 signal row : std_logic_vector(12 downto 0) := (others => '0');
 signal readBank, writeBank : std_logic_vector(1 downto 0) := (others => '0');
