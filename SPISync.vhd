@@ -64,10 +64,8 @@ begin
 					address <= row&readBank&col;
 					currentState <= readLSW;
 				when readLSW =>
-					if dataInRdy = '1' then
-						readDataOut <= readDataIn;
-						currentState <= readMSW;
-					end if;
+					readDataOut <= readDataIn;
+					currentState <= readMSW;
 				when readMSW =>
 					currentState <= writeLSW;
 				when writeLSW =>
@@ -79,7 +77,6 @@ begin
 						row <= row + 1;
 						if row = "1111111111111" then
 							writeBank <= writeBank + 1;
-							--row <= "0000000000000";
 						end if;
 					end if;
 					currentState <= writeMSW;
